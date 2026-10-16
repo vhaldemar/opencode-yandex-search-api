@@ -1,0 +1,31 @@
+{
+  "name": "opencode-yc-search",
+  "version": "0.0.1",
+  "description": "OpenCode plugin adding a Yandex Cloud (Yandex Search API) web-search provider.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "npm run build && node test/parse-xml.test.mjs && node test/smoke-setup.test.mjs"
+  },
+  "peerDependencies": {
+    "@opencode/plugin": "2.0.31"
+  },
+  "peerDependenciesMeta": {
+    "@opencode/theme": { "optional": true },
+    "@opentui/core": { "optional": true },
+    "@opentui/solid": { "optional": true },
+    "solid-js": { "optional": true }
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.0.31",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
